@@ -57,6 +57,16 @@ func routine2(c chan string) {
 	c <- "Morning"
 }
 
+// p17 - defer
+func checkDefer() {
+	fmt.Println("From defer: init")
+	defer fmt.Println("Hello 1")
+	defer fmt.Println("Hello 2")
+	defer fmt.Println("Hello 3")
+	fmt.Println("From defer: close")
+	return
+}
+
 func main() {
 	// Simple hello world
 	fmt.Print("Hello World\n")
@@ -234,5 +244,8 @@ func main() {
 	case op2 := <-cc2:
 		fmt.Println("From cc2 : ", op2)
 	}
+
+	// p17 - deffer
+	checkDefer()
 
 }
