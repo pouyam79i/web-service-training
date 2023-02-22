@@ -52,7 +52,8 @@ func BuildServer(ip, port string) {
 
 }
 
+// Running application
 func main() {
-	BuildServer("", "8085")
+	BuildServer("", "8080")
 	fmt.Println("Host is down!")
 }
